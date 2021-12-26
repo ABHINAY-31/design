@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.course{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 6px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 32%;
+    width: 100%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 20px 12px;
+    transition: .5s;
+}
+.course-col h3{
+    text-align: center;
+    font-weight: 600;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,.2);
+}
+
+
+.campus{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,176,61,0.8));
+    /* background: linear-gradient(rgba(4,8,30,0.7),rgba(11, 27, 117, 0.7)); */
+}
+.layer h3{
+    width: 100%;
+    font-weight: 800;
+    color: black;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+   bottom: 49%;
+   opacity: 1;
+}
+.layer .btn{
+    width: 38%;
+    font-weight: 500;
+    border: 1px solid black;
+    background-color: #36096d;
+    background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+    color: white;
+    border-radius: 7px;
+    font-size: 28px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover .btn{
+    bottom: 35%;
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 3px 7px 10px rgba(0,0,0,0.5);
+ }
+@media(max-width:900px){
+    .row{
+        flex-direction: column;
+    }
+    .campus-col img{
+        height: 350px;
+    }
+    .layer .btn{
+        width: 33%;
+        font-size: 25px;
+    }
+}
+@media(max-width:360px){
+    .layer .btn{
+        font-size: 21px;
+    }
+}
+
+/* stall */
